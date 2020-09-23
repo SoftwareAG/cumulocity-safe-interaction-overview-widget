@@ -36,11 +36,11 @@ To deliver the expected functionality one need to select the Group in configurat
 
 "@angular/material": "8.2.3",
 
-"@c8y/ngx-components": "^1006.3.0",
+"@c8y/ngx-components": "^1006.6.8",
 
-"@c8y/ng1-modules": "^1006.3.0",
+"@c8y/ng1-modules": "^1006.6.8",
 
-"@c8y/style": "^1006.3.0",
+"@c8y/style": "^1006.6.8",
 
 ```
 

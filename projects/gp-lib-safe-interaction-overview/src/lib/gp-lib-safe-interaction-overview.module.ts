@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CoreModule, HOOK_COMPONENT} from '@c8y/ngx-components';
+import { CoreModule, HOOK_COMPONENTS} from '@c8y/ngx-components';
 import {MatButtonModule} from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material';
 import { GpLibSafeInteractionOverviewComponent } from './gp-lib-safe-interaction-overview.component';
@@ -19,7 +19,7 @@ import { GpLibSafeInteractionOverviewService } from './gp-lib-safe-interaction-o
   providers: [
     GpLibSafeInteractionOverviewService,
 {
-    provide: HOOK_COMPONENT,
+    provide: HOOK_COMPONENTS,
     multi: true,
     useValue: {
         id: 'safe-interaction-overview.widget',
