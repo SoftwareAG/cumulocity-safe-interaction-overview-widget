@@ -55,12 +55,12 @@ To deliver the expected functionality one need to select the Group in configurat
      Installation command: ```npm i @angular/material@8.2.3 ``` 
 
 
-2. Grab the Process Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-processing/storage/show/Releases/gp-lib-processing-widget-1.0.0.tgz)**
+2. Grab the Safe Interaction Overview Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-lib-safe-interaction-overview-1.0.0.tgz)**
 
 3. Install the Binary file in app builder.
 
 ```
-npm i <binary  file  path>/gp-lib-processing-widget-1.0.0.tgz
+npm i <binary  file  path>/gp-lib-safe-interaction-overview-1.0.0.tgz
 ```
 
 4. Open index.less located at /cumulocity-app-builder/ui-assets/
@@ -72,17 +72,17 @@ npm i <binary  file  path>/gp-lib-processing-widget-1.0.0.tgz
 @import '~@c8y/style/main.less';
 @import '~@c8y/style/extend.less';
 ```
-6. Import GpLibProcessingWidgetModule in app.module.ts and also place the imported Module under `@NgModule`.
+6. Import GpLibSafeInteractionOverviewModule in app.module.ts and also place the imported Module under `@NgModule`.
 
 ```
 
-import {GpLibProcessingWidgetModule} from 'gp-lib-processing-widget';
+import {GpLibSafeInteractionOverviewModule} from 'gp-lib-safe-interaction-overview';
 
 @NgModule({
 
   imports: [
 
-    GpLibProcessingWidgetModule    
+    GpLibSafeInteractionOverviewModule    
 
       ]
 
@@ -100,3 +100,157 @@ npm run build
 // Deploy App
 npm run deploy
 ```
+
+**Installation Steps For Cockpit:**
+
+**Note:** If you are new to Cockpit or not yet created any cockpit application then please follow [Web SDK for Angular](https://cumulocity.com/guides/web/angular/) before proceeding further.
+
+1. Open Your existing Cockpit/Cumulocity project and install external dependencies by executing below command or install it manually.
+
+  - Angular Material version 8.2.3
+
+     Installation command: ```npm i @angular/material@8.2.3 ``` 
+
+
+2. Grab the Safe Interaction Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-lib-safe-interaction-overview-1.0.0.tgz)**
+
+3. Install the Binary file in app builder.
+
+```
+npm i <binary  file  path>/gp-lib-safe-interaction-overview-1.0.0.tgz
+```
+
+**Note:** If you don't find branding folder then please follow [Cumulocity Branding](https://cumulocity.com/guides/web/angular/#branding)
+
+4. Open branding.less located at /cumulocity-app/branding/
+
+5. In `branding.less ` import following design templates. Import at first line/begining of file(Please ignore this step if it already exist).
+
+  ```
+
+  @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+  @import '~@c8y/style/main.less';
+
+  @import '~@c8y/style/extend.less';
+  ```
+6. Import GpLibSafeInteractionOverviewModule in app.module.ts and also place the imported Module under `@NgModule`.
+
+  ```
+
+import {GpLibSafeInteractionOverviewModule} from 'gp-lib-safe-interaction-overview';
+
+  @NgModule({
+
+    imports: [
+
+      GpLibSafeInteractionOverviewModule    
+
+        ]
+
+    })
+
+  ```
+
+7.  Congratulation! Installation is now completed. Now you can run your app locally or build and deploy it into your tenant.
+  
+```
+//Start App Builder
+npm run start
+// Build App
+npm run build
+// Deploy App
+npm run deploy
+```
+
+## Build Instructions
+  
+**Note:** It is only necessary to follow these instructions if you are modifying/extending this widget, otherwise see the [Installation Guide](#Installation).
+  
+**Prerequisites:**
+  
+* Git
+  
+* NodeJS (release builds are currently built with `v10.19.0`)
+  
+* NPM (Included with NodeJS)
+
+**Instructions**
+
+1. Clone the repository:
+```
+git clone https://labcase.softwareag.com/labcase/gp-ssd-overview.git
+```
+2. Change directory:
+
+  ```cd gp-ssd-overview```
+
+3. run npm i command to install all library files specified in source code
+
+  ```npm i ``` 
+
+4. run npm run buildMinor command to create a binary file under dist folder
+
+  ```npm run buildMinor ``` 
+
+5. (Optional) Local development server:
+  
+  ```npm start```
+
+6. Build the app:
+
+  ```npm run build```
+
+7. Deploy the app:
+  ```npm run deploy```
+
+## QuickStart
+This guide will teach you how to add widget in your existing or new dashboard.
+
+1. Open the Application Builder from the app switcher (Next to your username in the top right)
+
+2. Click Add application
+
+3. Enter the application details and click Save
+
+4. Select Add dashboard
+
+5. Click Blank Dashboard
+
+6. Enter the dashboard details and click Save
+
+7. Select the dashboard from the navigation
+
+8. Check for your widget and test it out.
+
+
+
+Congratulations! Safe Interaction Overview Widget is configured.
+  
+## User Guide
+
+1. Target Assets/Devices - select group of interest
+
+
+## Troubleshooting
+
+### Report a bug
+
+Create a new issue in the [Issues](https://labcase.softwareag.com/projects/gp-ssd-overview/issues) section of this Labcase project and assign it to *Owner Full Name*. Set the tracker to `Bug` and provide a meaningful title. Make sure to describe the bug as detailed as possible and how the bug can be reproduced.
+
+### Request a feature
+
+Create a new issue in the [Issues](https://labcase.softwareag.com/projects/gp-ssd-overview/issues) section of this Labcase project and assign it to *Owner Full Name*. Set the tracker to `Requirement` and provide a meaningful title. Shortly describe the feature.
+
+
+------------------------------
+  
+  
+This widget is provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
+  
+_____________________
+  
+For more information you can Ask a Question in the [TECHcommunity Forums](http://tech.forums.softwareag.com/techjforum/forums/list.page?product=cumulocity).
+  
+  
+You can find additional information in the [Software AG TECHcommunity](http://techcommunity.softwareag.com/home/-/product/name/cumulocity).
