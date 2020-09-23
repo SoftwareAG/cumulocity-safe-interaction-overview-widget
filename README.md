@@ -18,7 +18,7 @@ To deliver the expected functionality one need to select the Group in configurat
   
 *  **App Builder:** Tested with Cumulocity App Builder version 1.2.1.
   
-*  **Cockpit Application:** Tested with Cockpit 1006.3.0 with [Patch Fix](https://www.npmjs.com/package/cumulocity-runtime-widget-loader).
+*  **Cockpit Application:** Tested with Cockpit 1006.11.0 with [Patch Fix](https://www.npmjs.com/package/cumulocity-runtime-widget-loader).
 
 **Prerequisites:**
   
