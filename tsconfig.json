@@ -17,10 +17,19 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "gp-lib-safe-interaction-overview": [
+        "dist/gp-lib-safe-interaction-overview"
+      ],
+      "gp-lib-safe-interaction-overview/*": [
+        "dist/gp-lib-safe-interaction-overview/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "exclude":["dist"]
 }

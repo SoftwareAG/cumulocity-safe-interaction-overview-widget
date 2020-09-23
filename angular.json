@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "gp-lib-safe-interaction-overview": {
+      "projectType": "library",
+      "root": "projects/gp-lib-safe-interaction-overview",
+      "sourceRoot": "projects/gp-lib-safe-interaction-overview/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/gp-lib-safe-interaction-overview/tsconfig.lib.json",
+            "project": "projects/gp-lib-safe-interaction-overview/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gp-lib-safe-interaction-overview/src/test.ts",
+            "tsConfig": "projects/gp-lib-safe-interaction-overview/tsconfig.spec.json",
+            "karmaConfig": "projects/gp-lib-safe-interaction-overview/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gp-lib-safe-interaction-overview/tsconfig.lib.json",
+              "projects/gp-lib-safe-interaction-overview/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "gp-safe-interation-overview"
 }

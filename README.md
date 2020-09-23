@@ -1,27 +1,102 @@
-# GpSafeInterationOverview
+# Cumulocity Widget - Safe Interaction Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
+##  Overview
+This is an Angular 8 widget designed for Smart Social Distancing Demo. The widget displays the count of total, assigned, available and non operational tags.
 
-## Development server
+To deliver the expected functionality one need to select the Group in configuration. There is a toggle button for management which you can switch on if you want to see all the 4 counts(total,assigned,available,non-operational) and keep it off if you want to see only assigned and available counts.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+ *  **Displays the tags availbale count:** 
+ *  **Display the tags unavailable count:** 
+ * **Displays the tags total count:** If management is turned on in configuration.
+ * **Displays the tags non-operational count:** If management is turned on in configuration.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
+  
+**Supported Cumulocity Environments:**
+  
+*  **App Builder:** Tested with Cumulocity App Builder version 1.2.1.
+  
+*  **Cockpit Application:** Tested with Cockpit 1006.3.0 with [Patch Fix](https://www.npmjs.com/package/cumulocity-runtime-widget-loader).
 
-## Build
+**Prerequisites:**
+  
+* Git
+  
+* NodeJS (release builds are currently built with `v10.19.0`)
+  
+* NPM (Included with NodeJS)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+**External dependencies:**
 
-## Running unit tests
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+"@angular/cdk": "8.2.3"
 
-## Running end-to-end tests
+"@angular/material": "8.2.3",
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+"@c8y/ngx-components": "^1006.3.0",
 
-## Further help
+"@c8y/ng1-modules": "^1006.3.0",
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+"@c8y/style": "^1006.3.0",
+
+```
+
+**Installation Steps For App Builder:**
+
+**Note:** If you are new to App Builder or not yet downloaded/clone app builder code then please follow [App builder documentation(Build Instructions)](https://github.com/SoftwareAG/cumulocity-app-builder) before proceeding further.
+
+1. Open Your existing App Builder project and install external dependencies by executing below command or install it manually.
+   
+  - Angular Material version 8.2.3
+
+     Installation command: ```npm i @angular/material@8.2.3 ``` 
+
+
+2. Grab the Process Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-processing/storage/show/Releases/gp-lib-processing-widget-1.0.0.tgz)**
+
+3. Install the Binary file in app builder.
+
+```
+npm i <binary  file  path>/gp-lib-processing-widget-1.0.0.tgz
+```
+
+4. Open index.less located at /cumulocity-app-builder/ui-assets/
+
+5. Update index.less file with below theme. Import at first line in file/begining of file(Please ignore this step if it already exist).
+
+```
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@c8y/style/main.less';
+@import '~@c8y/style/extend.less';
+```
+6. Import GpLibProcessingWidgetModule in app.module.ts and also place the imported Module under `@NgModule`.
+
+```
+
+import {GpLibProcessingWidgetModule} from 'gp-lib-processing-widget';
+
+@NgModule({
+
+  imports: [
+
+    GpLibProcessingWidgetModule    
+
+      ]
+
+  })
+
+```
+
+7.  Congratulation! Installation is now completed. Now you can run app builder locally or build and deploy it into your tenant.
+  
+```
+//Start App Builder
+npm run start
+// Build App
+npm run build
+// Deploy App
+npm run deploy
+```

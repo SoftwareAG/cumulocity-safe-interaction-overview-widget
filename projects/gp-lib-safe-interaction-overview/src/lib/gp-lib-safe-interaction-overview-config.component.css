@@ -1,0 +1,9 @@
+.toggle-view{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+.form-group label{
+    display: flex !important;
+}

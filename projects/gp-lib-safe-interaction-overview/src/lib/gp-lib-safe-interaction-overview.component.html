@@ -1,0 +1,41 @@
+
+
+  <div class="row" style="width: 100%">
+    <div style ="float: right; margin-right: 10px;">
+      <button type="button" class="btn btn-link c8y-realtime" title="Toggle realtime" (click)="toggle()" >
+        <span [ngClass]="realtimeState?'c8y-pulse active' : 'c8y-pulse inactive'" ></span>
+        <span translate="">Realtime</span>
+      </button>
+      <button mat-icon-button style="float: right; margin-right: 20px;color:#1776BF;" type="button" class="button" (click)="refresh()"><span class="fa fa-refresh"></span></button>
+      </div>
+  </div>
+<div *ngIf="dataLoaded | async">
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+      <div style="flex-grow: 0; flex-basis: 40%; " *ngIf="config.toggleState">
+        <div class="panel panel-default" style="border-width: thin; border-color: lightgrey;">
+          <div class="panel-heading text-center" style="background-color: lightgrey; height: 30px ">TOTAL</div>
+          <div id="total" class="panel-body text-center" style="font-size: xx-large; color: grey; font-weight: bold; height: 68px;">{{response.totalcount}}</div>
+        </div>
+      </div>
+      <div style="flex-grow: 0;  flex-basis: 40%;">
+        <div class="panel panel-default" style="border-width: thin; border-color: lightgrey;" >
+          <div class="panel-heading text-center" style="background-color: lightgrey; height: 30px ">ASSIGNED</div>
+          <div id="alerts" class="panel-body text-center" style="font-size: xx-large; color:orange; font-weight: bold; height: 68px; ">{{response.assigned}}</div>
+        </div>
+      </div>  
+      <div style="flex-grow: 0;  flex-basis: 40%; ">
+        <div class="panel panel-default" style="border-width: thin; border-color: lightgrey;">
+          <div class="panel-heading text-center" style="background-color: lightgrey; height: 30px ">AVAILABLE</div>
+          <div id="available" class="panel-body text-center" style="font-size: xx-large; color:seagreen; font-weight: bold; height: 68px;">{{response.available}}</div>
+        </div>
+      </div>
+      <div style="flex-grow: 0;  flex-basis: 40%;"  *ngIf="config.toggleState">
+        <div class="panel panel-default" style="border-width: thin; border-color: lightgrey;">
+          <div class="panel-heading text-center" style="background-color: lightgrey; height: 30px ">NON-OPERATIONAL</div>
+          <div id="total" class="panel-body text-center" style="font-size: xx-large; color: grey; font-weight: bold; height: 68px;">{{response.nonopt}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
