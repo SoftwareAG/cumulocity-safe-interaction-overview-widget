@@ -5,7 +5,7 @@ import { MatSlideToggleModule } from '@angular/material';
 import { GpLibSafeInteractionOverviewComponent } from './gp-lib-safe-interaction-overview.component';
 import { SafeInteractionOverviewConfigComponent } from './gp-lib-safe-interaction-overview-config.component';
 import { GpLibSafeInteractionOverviewService } from './gp-lib-safe-interaction-overview.service';
-
+import * as preview from './preview-image';
 
 
 @NgModule({
@@ -24,6 +24,7 @@ import { GpLibSafeInteractionOverviewService } from './gp-lib-safe-interaction-o
     useValue: {
         id: 'safe-interaction-overview.widget',
         label: 'Safe Interaction Overview',
+        previewImage: preview.previewImage,
         description: 'Safe Interaction Overview',
         component: GpLibSafeInteractionOverviewComponent,
         configComponent: SafeInteractionOverviewConfigComponent,
