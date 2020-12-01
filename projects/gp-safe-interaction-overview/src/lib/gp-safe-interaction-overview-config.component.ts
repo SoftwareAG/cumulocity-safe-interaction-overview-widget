@@ -16,19 +16,14 @@
  * limitations under the License.
  */
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+@Component({
+  templateUrl: './gp-safe-interaction-overview-config.component.html',
+  styleUrls: ['./gp-safe-interaction-overview-config.component.css']
 })
-export class AppModule { }
+export class SafeInteractionOverviewConfigComponent {
+  @Input() config: any = {};
+    constructor() {}
+
+}

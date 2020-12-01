@@ -1,30 +1,48 @@
+/**
+ * Copyright (c) 2020 Software AG, Darmstadt, Germany and/or its licensors
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 import { Component, OnInit, Input } from '@angular/core';
-import { GpLibSafeInteractionOverviewService } from './gp-lib-safe-interaction-overview.service';
+import { GpSafeInteractionOverviewService } from './gp-safe-interaction-overview.service';
 import { from, Subject } from 'rxjs';
 import { skip, takeUntil } from 'rxjs/operators';
 import { InventoryService } from '@c8y/client';
 
 @Component({
-  selector: 'lib-gp-lib-safe-interaction-overview',
-  templateUrl: './gp-lib-safe-interaction-overview.component.html'
+  selector: 'lib-gp-safe-interaction-overview',
+  templateUrl: './gp-safe-interaction-overview.component.html'
 })
-export class GpLibSafeInteractionOverviewComponent implements OnInit {
+export class GpSafeInteractionOverviewComponent implements OnInit {
   @Input() config;
   response: any;
   dataLoaded: any;
   realtimeState = true;
   unsubscribeRealTime$ = new Subject<void>();
   constructor(
-    public overviewService: GpLibSafeInteractionOverviewService,
+    public overviewService: GpSafeInteractionOverviewService,
     public inventory: InventoryService) { }
 
     async ngOnInit() {
       this.response = await this.overviewService.fetchTagsList(
         this.config.device.id
       );
-      this.response['nonopt'] =
-        this.response['totalcount'] -
-        (this.response['available'] + this.response['assigned']);
+      this.response.nonopt =
+        this.response.totalcount -
+        (this.response.available + this.response.assigned);
       this.handleRealtime(true);
       this.dataLoaded = Promise.resolve(true);
     }
@@ -35,9 +53,9 @@ export class GpLibSafeInteractionOverviewComponent implements OnInit {
         this.response = await this.overviewService.fetchTagsList(
           this.config.device.id
         );
-        this.response['nonopt'] =
-          this.response['totalcount'] -
-          (this.response['available'] + this.response['assigned']);
+        this.response.nonopt =
+          this.response.totalcount -
+          (this.response.available + this.response.assigned);
 
         this.realtimeState = true;
         this.handleRealtime(true);
@@ -45,9 +63,9 @@ export class GpLibSafeInteractionOverviewComponent implements OnInit {
         this.response = await this.overviewService.fetchTagsList(
           this.config.device.id
         );
-        this.response['nonopt'] =
-          this.response['totalcount'] -
-          (this.response['available'] + this.response['assigned']);
+        this.response.nonopt =
+          this.response.totalcount -
+          (this.response.available + this.response.assigned);
       }
       this.dataLoaded = Promise.resolve(true);
     }
@@ -63,7 +81,8 @@ export class GpLibSafeInteractionOverviewComponent implements OnInit {
         // Get List of devices
         const devicesAll = inventory.childAssets.references;
         const x = devicesAll.map(async (device) => {
-          const inventory = await from(
+          const inventorychildAssets = from(
+            // tslint:disable-next-line: deprecation
             this.inventory.detail$(device.managedObject.id, {
               hot: true,
               realtime: true,
@@ -75,9 +94,9 @@ export class GpLibSafeInteractionOverviewComponent implements OnInit {
               console.log('realtime worked');
               const childDevice = data[0];
               this.response = this.overviewService.fetchResult(childDevice);
-              this.response['nonopt'] =
-                this.response['totalcount'] -
-                (this.response['available'] + this.response['assigned']);
+              this.response.nonopt =
+                this.response.totalcount -
+                (this.response.available + this.response.assigned);
             });
         });
       }

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GpLibSafeInteractionOverviewComponent } from './gp-lib-safe-interaction-overview.component';
+import { GpLibSafeInteractionOverviewComponent } from './gp-safe-interaction-overview.component';
 
 describe('GpLibSafeInteractionOverviewComponent', () => {
   let component: GpLibSafeInteractionOverviewComponent;

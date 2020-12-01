@@ -55,12 +55,12 @@ To deliver the expected functionality one need to select the Group in configurat
      Installation command: ```npm i @angular/material@8.2.3 ``` 
 
 
-2. Grab the Safe Interaction Overview Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-lib-safe-interaction-overview-1.0.0.tgz)**
+2. Grab the Safe Interaction Overview Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-safe-interaction-overview-1.0.0.tgz)**
 
 3. Install the Binary file in app builder.
 
 ```
-npm i <binary  file  path>/gp-lib-safe-interaction-overview-1.0.0.tgz
+npm i <binary  file  path>/gp-safe-interaction-overview-1.0.0.tgz
 ```
 
 4. Open index.less located at /cumulocity-app-builder/ui-assets/
@@ -72,17 +72,17 @@ npm i <binary  file  path>/gp-lib-safe-interaction-overview-1.0.0.tgz
 @import '~@c8y/style/main.less';
 @import '~@c8y/style/extend.less';
 ```
-6. Import GpLibSafeInteractionOverviewModule in app.module.ts and also place the imported Module under `@NgModule`.
+6. Import GpSafeInteractionOverviewModule in app.module.ts and also place the imported Module under `@NgModule`.
 
 ```
 
-import {GpLibSafeInteractionOverviewModule} from 'gp-lib-safe-interaction-overview';
+import {GpSafeInteractionOverviewModule} from 'gp-safe-interaction-overview';
 
 @NgModule({
 
   imports: [
 
-    GpLibSafeInteractionOverviewModule    
+    GpSafeInteractionOverviewModule    
 
       ]
 
@@ -112,12 +112,12 @@ npm run deploy
      Installation command: ```npm i @angular/material@8.2.3 ``` 
 
 
-2. Grab the Safe Interaction Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-lib-safe-interaction-overview-1.0.0.tgz)**
+2. Grab the Safe Interaction Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-safe-interaction-overview-1.0.0.tgz)**
 
 3. Install the Binary file in app builder.
 
 ```
-npm i <binary  file  path>/gp-lib-safe-interaction-overview-1.0.0.tgz
+npm i <binary  file  path>/gp-safe-interaction-overview-1.0.0.tgz
 ```
 
 **Note:** If you don't find branding folder then please follow [Cumulocity Branding](https://cumulocity.com/guides/web/angular/#branding)
@@ -134,17 +134,17 @@ npm i <binary  file  path>/gp-lib-safe-interaction-overview-1.0.0.tgz
 
   @import '~@c8y/style/extend.less';
   ```
-6. Import GpLibSafeInteractionOverviewModule in app.module.ts and also place the imported Module under `@NgModule`.
+6. Import GpSafeInteractionOverviewModule in app.module.ts and also place the imported Module under `@NgModule`.
 
   ```
 
-import {GpLibSafeInteractionOverviewModule} from 'gp-lib-safe-interaction-overview';
+import {GpSafeInteractionOverviewModule} from 'gp-safe-interaction-overview';
 
   @NgModule({
 
     imports: [
 
-      GpLibSafeInteractionOverviewModule    
+      GpSafeInteractionOverviewModule    
 
         ]
 

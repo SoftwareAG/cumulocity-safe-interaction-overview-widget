@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GpLibSafeInteractionOverviewService } from './gp-lib-safe-interaction-overview.service';
+import { GpLibSafeInteractionOverviewService } from './gp-safe-interaction-overview.service';
 
 describe('GpLibSafeInteractionOverviewService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

@@ -1,0 +1,12 @@
+{
+  "name": "Safe Interaction Overview Runtime Widget",
+  "contextPath": "gp-safe-interation-overview-runtime-widget",
+  "key": "gp-safe-interation-overview-runtime-widget-application-key",
+  "contentSecurityPolicy": "default-src 'self'",
+  "icon": {
+    "class": "fa fa-delicious"
+  },
+  "manifest": {
+    "noAppSwitcher": true
+  }
+}
