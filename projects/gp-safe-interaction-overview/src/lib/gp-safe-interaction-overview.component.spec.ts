@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GpLibSafeInteractionOverviewComponent } from './gp-safe-interaction-overview.component';
+import { GpSafeInteractionOverviewComponent } from './gp-safe-interaction-overview.component';
 
-describe('GpLibSafeInteractionOverviewComponent', () => {
-  let component: GpLibSafeInteractionOverviewComponent;
-  let fixture: ComponentFixture<GpLibSafeInteractionOverviewComponent>;
+describe('GpSafeInteractionOverviewComponent', () => {
+  let component: GpSafeInteractionOverviewComponent;
+  let fixture: ComponentFixture<GpSafeInteractionOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GpLibSafeInteractionOverviewComponent ]
+      declarations: [ GpSafeInteractionOverviewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GpLibSafeInteractionOverviewComponent);
+    fixture = TestBed.createComponent(GpSafeInteractionOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

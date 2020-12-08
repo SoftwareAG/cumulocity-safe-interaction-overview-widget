@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GpLibSafeInteractionOverviewService } from './gp-safe-interaction-overview.service';
+import { GpSafeInteractionOverviewService } from './gp-safe-interaction-overview.service';
 
-describe('GpLibSafeInteractionOverviewService', () => {
+describe('GpSafeInteractionOverviewService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: GpLibSafeInteractionOverviewService = TestBed.get(GpLibSafeInteractionOverviewService);
+    const service: GpSafeInteractionOverviewService = TestBed.get(GpSafeInteractionOverviewService);
     expect(service).toBeTruthy();
   });
 });

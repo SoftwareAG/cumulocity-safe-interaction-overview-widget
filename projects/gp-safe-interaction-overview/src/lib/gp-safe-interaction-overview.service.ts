@@ -47,7 +47,7 @@ export class GpSafeInteractionOverviewService {
     }
     return response;
   }
-
+  // fetches tag list details
   async fetchTagsList(id) {
     await this.getDeviceList(id).then((response) => {
 
@@ -68,6 +68,7 @@ export class GpSafeInteractionOverviewService {
 
     return tagsOverview;
   }
+  // fetches tag overview details
   fetchResult(childDevice) {
     if (this.deviceRecord.hasOwnProperty(childDevice.id)) {
       if (childDevice.assignmentStatus) {
