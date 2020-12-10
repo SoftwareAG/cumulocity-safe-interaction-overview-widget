@@ -1,6 +1,6 @@
 {
   "name": "gp-safe-interation-overview",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The widget displays the count of total, assigned, available and non operational tags.",
   "author": "Khushi Khanna - Software AG, Global Presales",
   "license": "Apache 2.0",

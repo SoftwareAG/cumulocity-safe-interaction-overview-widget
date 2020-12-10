@@ -91,7 +91,6 @@ export class GpSafeInteractionOverviewComponent implements OnInit {
             .pipe(skip(isInit ? 1 : 0)) // skiping first instance since we already get latest data from init call
             .pipe(takeUntil(this.unsubscribeRealTime$))
             .subscribe(async (data) => {
-              console.log('realtime worked');
               const childDevice = data[0];
               this.response = this.overviewService.fetchResult(childDevice);
               this.response.nonopt =
