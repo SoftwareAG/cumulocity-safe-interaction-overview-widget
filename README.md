@@ -1,4 +1,4 @@
-# Cumulocity Widget - Safe Interaction Overview
+# Cumulocity Widget - Safe Interaction Overview[<img width="35" src="https://user-images.githubusercontent.com/67993842/97668428-f360cc80-1aa7-11eb-8801-da578bda4334.png"/>](https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget/releases/download/1.0.0/gp-safe-interation-overview-runtime-widget-1.0.0.zip)
 
 ##  Overview
 This is an Angular 8 widget designed for Smart Social Distancing Demo. The widget displays the count of total, assigned, available and non operational tags.
@@ -13,6 +13,10 @@ To deliver the expected functionality one need to select the Group in configurat
  * **Displays the tags non-operational count:** If management is turned on in configuration.
 
 ## Installation
+## Runtime Widget Installation (Without Application Deployment)
+
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget/releases/download/1.0.0/gp-safe-interation-overview-runtime-widget-1.0.0.zip) and follow runtime deployment instruction from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader)
+
   
 **Supported Cumulocity Environments:**
   
@@ -55,14 +59,13 @@ To deliver the expected functionality one need to select the Group in configurat
      Installation command: ```npm i @angular/material@8.2.3 ``` 
 
 
-2. Grab the Safe Interaction Overview Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-safe-interaction-overview-1.0.0.tgz)**
+2. Grab the Safe Interaction Overview Widget **[Latest Release Binary](https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget/releases/download/1.0.0/gp-safe-interaction-overview-1.0.0.tgz)**
 
 3. Install the Binary file in app builder.
 
 ```
 npm i <binary  file  path>/gp-safe-interaction-overview-1.0.0.tgz
 ```
-
 4. Open index.less located at /cumulocity-app-builder/ui-assets/
 
 5. Update index.less file with below theme. Import at first line in file/begining of file(Please ignore this step if it already exist).
@@ -112,7 +115,7 @@ npm run deploy
      Installation command: ```npm i @angular/material@8.2.3 ``` 
 
 
-2. Grab the Safe Interaction Widget **[Latest Release Binary](https://labcase.softwareag.com/projects/gp-ssd-overview/storage/show/Releases/gp-safe-interaction-overview-1.0.0.tgz)**
+2. Grab the Safe Interaction Widget **[Latest Release Binary](https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget/releases/download/1.0.0/gp-safe-interaction-overview-1.0.0.tgz)**
 
 3. Install the Binary file in app builder.
 
@@ -179,7 +182,7 @@ npm run deploy
 
 1. Clone the repository:
 ```
-git clone https://labcase.softwareag.com/labcase/gp-ssd-overview.git
+git clone https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget.git
 ```
 2. Change directory:
 
@@ -233,18 +236,6 @@ Congratulations! Safe Interaction Overview Widget is configured.
 
 
 ## Troubleshooting
-
-### Report a bug
-
-Create a new issue in the [Issues](https://labcase.softwareag.com/projects/gp-ssd-overview/issues) section of this Labcase project and assign it to *Owner Full Name*. Set the tracker to `Bug` and provide a meaningful title. Make sure to describe the bug as detailed as possible and how the bug can be reproduced.
-
-### Request a feature
-
-Create a new issue in the [Issues](https://labcase.softwareag.com/projects/gp-ssd-overview/issues) section of this Labcase project and assign it to *Owner Full Name*. Set the tracker to `Requirement` and provide a meaningful title. Shortly describe the feature.
-
-
-------------------------------
-  
   
 This widget is provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
   
