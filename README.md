@@ -15,7 +15,7 @@ To deliver the expected functionality one need to select the Group in configurat
 ## Installation
 ## Runtime Widget Installation (Without Application Deployment)
 
-* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget/releases/download/1.0.0/gp-safe-interation-overview-runtime-widget-1.0.0.zip) and follow runtime deployment instruction from [here](https://github.com/SoftwareAG/cumulocity-runtime-widget-loader)
+* This widget support runtime deployment. Download [Runtime Binary](https://github.com/SoftwareAG/cumulocity-safe-interaction-overview-widget/releases/download/1.0.0/gp-safe-interation-overview-runtime-widget-1.0.0.zip) and use application builder to install your runtime widget.
 
   
 **Supported Cumulocity Environments:**
